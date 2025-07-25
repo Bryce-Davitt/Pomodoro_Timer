@@ -1,0 +1,90 @@
+#pomodoro-overlay {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.28), 0 1.5px 4px rgba(255,255,255,0.10);
+  padding: 22px 28px 18px 28px;
+  min-width: 220px;
+  min-height: 120px;
+  color: #fff;
+  user-select: none;
+  transition: box-shadow 0.2s;
+  border: 2px solid #fff;
+  position: relative;
+  resize: both;
+  overflow: auto;
+}
+#pomodoro-overlay:hover {
+  box-shadow: 0 10px 32px rgba(0,0,0,0.38), 0 2px 8px rgba(255,255,255,0.13);
+}
+#pomodoro-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #b91c1c 0%, #7f1d1d 100%);
+  color: #fff;
+  border-radius: 10px 10px 6px 6px;
+  padding: 7px 0 7px 12px;
+  cursor: move;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.10);
+  border: 2px solid #fff;
+  border-bottom: none;
+}
+#pomodoro-timer {
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 12px 0 18px 0;
+  letter-spacing: 0.08em;
+  color: #fff;
+  text-shadow: 0 2px 8px #b91c1c, 0 0 2px #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: #1a1a1a;
+  padding: 8px 0;
+}
+#pomodoro-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+#pomodoro-controls button {
+  background: linear-gradient(90deg, #b91c1c 0%, #7f1d1d 100%);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1.5px 4px rgba(255,255,255,0.10);
+  transition: background 0.2s, transform 0.1s, border-color 0.2s;
+  outline: none;
+}
+#pomodoro-controls button:hover {
+  background: linear-gradient(90deg, #7f1d1d 0%, #b91c1c 100%);
+  transform: translateY(-2px) scale(1.04);
+  border-color: #fff;
+}
+#pomodoro-close {
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  background: #b91c1c !important;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  z-index: 1001;
+  transition: color 0.2s, background 0.2s;
+}
+#pomodoro-close:hover {
+  background: #fff !important;
+  color: #b91c1c !important;
+} 

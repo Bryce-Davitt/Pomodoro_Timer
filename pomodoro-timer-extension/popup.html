@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="drag-handle" id="dragHandle"></div>
+    <div class="timer-container">
+        <div class="timer-label" id="timerLabel">FOCUS TIME</div>
+        <div class="timer-display" id="timerDisplay">25:00</div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 100%"></div>
+        </div>
+        <div class="controls">
+            <button id="startBtn">START</button>
+            <button id="pauseBtn">PAUSE</button>
+            <button id="resetBtn">RESET</button>
+        </div>
+        <div class="session-counter">
+            Session: <span id="sessionCount">1</span>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

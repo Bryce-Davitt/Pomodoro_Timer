@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #1a0000, #330000);
+    color: #ff3333;
+    width: 280px;
+    height: 320px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.drag-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(90deg, #ff3333, #cc0000);
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    z-index: 10;
+    border-radius: 15px 15px 0 0;
+}
+
+.drag-handle::after {
+    content: '⋮⋮⋮';
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+.timer-container {
+    background: linear-gradient(145deg, #000000, #1a0000);
+    border: 2px solid #ff3333;
+    border-radius: 15px;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    box-shadow: 
+        0 0 20px rgba(255, 51, 51, 0.3),
+        inset 0 0 20px rgba(255, 51, 51, 0.1);
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.timer-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff3333, #cc0000, #ff3333);
+    border-radius: 15px;
+    z-index: -1;
+    animation: borderGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.timer-display {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 15px 0;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.8);
+    letter-spacing: 2px;
+}
+
+.timer-label {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #ff6666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.controls {
+    margin: 15px 0;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    background: linear-gradient(145deg, #330000, #660000);
+    border: 1px solid #ff3333;
+    color: #ff3333;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+    min-width: 50px;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #660000, #990000);
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.5);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #330000;
+    border-radius: 3px;
+    margin: 15px 0;
+    overflow: hidden;
+    border: 1px solid #ff3333;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff3333, #cc0000);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.6);
+}
+
+.session-counter {
+    font-size: 0.8em;
+    color: #ff6666;
+    margin-top: 10px;
+}

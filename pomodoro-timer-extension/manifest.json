@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Red & Black Pomodoro Timer",
+  "version": "1.0",
+  "description": "A sleek red and black themed Pomodoro timer for productivity",
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  "action": {
+    "default_title": "Open Pomodoro Timer"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
